@@ -1,0 +1,359 @@
+/*
+  =====================================
+  Layout / Spacing
+  =====================================
+*/
+
+.page-content {
+  min-width: 420px;
+  /* margin-top value for fixed navbar: 85px, unfixed: 25px */
+  margin-top: 85px;
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+
+}
+
+
+/*
+  =====================================
+  Global Styles
+  =====================================
+*/
+
+body {
+  font-family: 'Raleway', 'Open Sans', sans-serif;
+}
+
+.btn-focus-off:focus {
+  outline: none;
+}
+
+.loader,
+.loader:before,
+.loader:after {
+  background: #343a40;
+  -webkit-animation: load1 1s infinite ease-in-out;
+  animation: load1 1s infinite ease-in-out;
+  width: 1em;
+  height: 4em;
+}
+
+.loader {
+  color: #343a40;
+  text-indent: -9999em;
+  margin: 30% auto;
+  position: relative;
+  font-size: 11px;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+.loader:before,
+.loader:after {
+  position: absolute;
+  top: 0;
+  content: '';
+}
+
+.loader:before {
+  left: -1.5em;
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.loader:after {
+  left: 1.5em;
+}
+
+@-webkit-keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+
+@keyframes load1 {
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 0;
+    height: 4em;
+  }
+  40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+  }
+}
+
+
+/*
+  =====================================
+  Nav Bar
+  =====================================
+*/
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.nav-btns{
+  display: flex;
+}
+
+.nav-btns div {
+  margin-left: 30px;
+}
+
+.name-block {
+  margin-left: 15px;
+  font-size: 20px;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.name-block:hover {
+  cursor: pointer;
+}
+
+.nav-item {
+  text-align: center;
+}
+
+
+/*
+  =====================================
+  Home
+  =====================================
+*/
+
+.pic-window {
+  height: 250px;
+  width: 200px;
+  border-radius: 35px;
+  background-image: url('/img/DK53A3i4.jpeg');
+  background-size: 250px auto;
+  background-position-x: 70%;
+  background-position-y: 10%;
+  margin: 0 auto 0 auto;
+}
+
+.about-me-details {
+  text-align: justify;
+}
+
+
+/*
+  =====================================
+  Projects
+  =====================================
+*/
+
+/* Values for a fixed nav bar: 25 -> 85px */
+#top {
+  height: 85px;
+  margin: -85px 0 0 0;
+}
+
+.anchor {
+  display: block;
+  position: relative;
+  top: -75px;
+  visibility: hidden;
+}
+
+.projects-anchors {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: stretch;
+  font-size: 1rem;
+}
+
+@media (max-width: 991.98px) {
+  .project-anchor-text {
+    display: block;
+  }
+
+  .project-anchor-space {
+    display: none;
+  }
+}
+
+.project-item {
+  margin: 20px 0 33px 0;
+  border: 1px solid #343a40;
+  border-radius: 11px;
+  box-shadow: 4px 4px 4px lightgrey;
+}
+
+.project-title {
+  padding: 10px 10px 1px 10px;
+  border-radius: 10px 10px 0 0;
+  color: white;
+}
+
+.project-byline {
+  margin-top: -8px;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.project-image {
+  margin-top: .5%;
+  text-align: center;
+  width: 98%;
+}
+
+.project-description {
+  margin: 0 auto;
+  width: 98%;
+}
+
+.project-tech {
+  margin-top: 10px;
+  font-size: 1.1rem;
+}
+
+.tech-title {
+  font-weight: 700;
+}
+
+.project-details {
+  margin-top: 5px;
+}
+
+.project-details {
+  padding-inline-start: 20px;
+}
+
+.project-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.project-footer {
+  height: 35px;
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+}
+
+/* SDC image carousel indicator colors */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+  opacity: 0.69;
+}
+
+.carousel-control-prev {
+  left: -25px;
+  top: -35px;
+}
+
+.carousel-control-next {
+  right: -25px;
+  top: -35px;
+}
+
+.carousel-indicators {
+  bottom: -25px !important;
+}
+
+.carousel-indicators li {
+  background-color: #999 !important;
+  background-color: rgba(70, 70, 70, 0.25) !important;
+}
+
+.carousel-indicators .active {
+  background-color: #444 !important;
+}
+
+
+/*
+  =====================================
+  Resume
+  =====================================
+*/
+
+.resume-page {
+  margin-top: -30px;
+  height: 100vh;
+}
+
+.resume-obj {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  -webkit-overflow-scrolling: touch
+}
+
+/*
+  =====================================
+  Contact
+  =====================================
+*/
+
+.social-links-container {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.social-link {
+  font-size: 75px;
+  margin-right: 30px;
+}
+
+.social-link:hover {
+  transform: translate(-2px, -2px);
+  text-shadow: 2px 2px lightgrey;
+}
+
+.li-icon {
+  color: #0072b1;
+}
+
+.gh-icon {
+  color: #211F1F;
+}
+
+.fb-icon {
+  color: #4267b2;
+}
+
+.submit-notification {
+  position: absolute;
+  margin-left: 20px;
+  font-style: italic;
+}
